@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="4" type="collection">
+        <element label="New field 1" max_length="40" name="new_field_1" type="integer"/>
+        <element choice="1" label="New field 2" max_length="40" name="new_field_2" type="integer">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="New Choice" max_length="40" name="u_choice_10" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Choice 1" sequence="0" value="Choice 1"/>
+                <element inactive_on_update="false" label="Choice 2" sequence="1" value="Choice 2"/>
+                <element inactive_on_update="false" label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
+        <element label="New Due Date" max_length="40" name="u_due_date_2" type="due_date"/>
+        <element label="New Integer" max_length="40" name="u_integer_3" type="integer"/>
+        <element attributes="encode_utf8=false" label="New Reference" max_length="32" name="u_reference_5" reference="sa_metric_anomaly_test_result" type="reference"/>
+        <element attributes="encode_utf8=false" label="Requested for" max_length="32" name="u_reference_7" reference="sa_metric_anomaly_test_result" type="reference"/>
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="facilities" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="Choice 3" sequence="0" value="Choice 3"/>
+                <element inactive_on_update="false" label="Facilities" sequence="0" value="facilities"/>
+                <element inactive="true" inactive_on_update="true" label="Human Resources" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="Facilities 2" sequence="1" value="facilities 2"/>
+                <element inactive="true" inactive_on_update="true" label="Legal" sequence="1" value="legal"/>
+                <element inactive="true" inactive_on_update="true" label="Paychecks" sequence="2" value="paychecks"/>
+            </choice>
+        </element>
+        <element label="New Name-Value Pairs" max_length="4000" name="u_simple_name_values_4" type="simple_name_values"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="Choice 3" sequence="0" value="Choice 3"/>
+                <element inactive_on_update="false" label="Facilities 1" sequence="0" value="[facilities1]"/>
+                <element inactive="true" inactive_on_update="true" label="Human Resources 1" sequence="0" value="[hr1]"/>
+                <element inactive_on_update="false" label="Facilities 2" sequence="1" value="[facilities2]"/>
+                <element inactive="true" inactive_on_update="true" label="Human Resources 2" sequence="1" value="[hr2]"/>
+                <element inactive="true" inactive_on_update="true" label="Legal 1" sequence="2" value="[legal1]"/>
+                <element inactive="true" inactive_on_update="true" label="Legal 2" sequence="3" value="[legal2]"/>
+                <element inactive="true" inactive_on_update="true" label="Paychecks 1" sequence="4" value="[paychecks1]"/>
+                <element inactive="true" inactive_on_update="true" label="Paychecks 2" sequence="5" value="[paychecks2]"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
